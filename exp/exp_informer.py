@@ -257,11 +257,11 @@ class Exp_Informer(Exp_Basic):
         return
 
     def _process_one_batch(self, dataset_object, batch_x, batch_y, batch_x_mark, batch_y_mark):
-        batch_x = batch_x.float().to(self.device)
-        batch_y = batch_y.float()
+        batch_x = batch_x.astype(float).to(self.device)
+        batch_y = batch_y.astype(float)
 
-        batch_x_mark = batch_x_mark.float().to(self.device)
-        batch_y_mark = batch_y_mark.float().to(self.device)
+        batch_x_mark = batch_x_mark.astype(float).to(self.device)
+        batch_y_mark = batch_y_mark.astype(float).to(self.device)
 
         # decoder input
         if self.args.padding==0:
