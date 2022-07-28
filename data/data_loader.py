@@ -286,8 +286,8 @@ class Dataset_Custom(Dataset):
 
 class Dataset_Pred(Dataset):
     def __init__(self, root_path, flag='pred', size=None, 
-                 features='S', data_path='ETTh1.csv', 
-                 target='OT', scale=True, inverse=False, timeenc=0, freq='15min', cols=None):
+                 features='M', data_path='energydata_complete.csv', 
+                 target='RH_6', scale=True, inverse=False, timeenc=0, freq='10min', cols=None):
         # size [seq_len, label_len, pred_len]
         # info
         if size == None:
