@@ -285,9 +285,9 @@ class Dataset_Custom(Dataset):
         return self.scaler.inverse_transform(data)
 
 class Dataset_Pred(Dataset):
-    def __init__(self, root_path, flag='pred', size=None, 
+    def __init__(self, root_path = 'drive/My Drive/Informer_Transformer_Time_Series/', flag='pred', size=None, 
                  features='M', data_path='energydata_complete.csv', 
-                 target='RH_6', scale=True, inverse=False, timeenc=0, freq='10min', cols=None):
+                 target='RH_6', scale=True, inverse=False, timeenc=0, freq='t', cols=None):
         # size [seq_len, label_len, pred_len]
         # info
         if size == None:
