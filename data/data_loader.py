@@ -184,11 +184,12 @@ class Dataset_ETT_minute(Dataset):
     def inverse_transform(self, data):
         return self.scaler.inverse_transform(data)
 
+    
 
 class Dataset_Custom(Dataset):
-    def __init__(self, root_path, flag='train', size=None, 
-                 features='S', data_path='ETTh1.csv', 
-                 target='OT', scale=True, inverse=False, timeenc=0, freq='h', cols=None):
+    def __init__(self, root_path = 'drive/My Drive/Informer_Transformer_Time_Series/', flag='train', size=None, 
+                 features='M', data_path='energydata_complete.csv', 
+                 target='RH_6', scale=True, inverse=False, timeenc=0, freq='t', cols=None):
         # size [seq_len, label_len, pred_len]
         # info
         if size == None:
